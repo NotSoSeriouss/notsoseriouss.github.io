@@ -38,3 +38,13 @@ hr {
     margin: 0 auto;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 }
+
+.caro-img {
+    margin: 0 auto;
+}
+
+.carousel {
+    width:640px;
+    height:360px;
+    margin: 0 auto;
+}
