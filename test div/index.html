@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test</title>
+        <link rel="stylesheet" href="il.css">
+        <script src="il.js"></script>
+    </head>
+    <body onload="hideAllDivs()">
+        <div id="div1">
+            <h1>Questo è il div 1</h1>
+            <form>
+                <input type="radio" id="answ4" name="quest1" onclick="showHideDivs(name, id)"><label>Div5</label>
+                <input type="radio" id="answ5" name="quest1" onclick="showHideDivs(name, id)"><label>Div6</label>
+            </form>
+        </div>
+        <br>
+        <div id="div2">
+            <h1>Questo è il div 2</h1>
+        </div>
+        <br>
+        <div id="div3">
+            <h1>Questo è il div 3</h1>
+        </div>
+        <br>
+        <div id="div4">
+            <h1>Questo è una copia del div 3</h1>
+        </div>
+        <br>
+        <form action="il.js">
+            <input type="radio" id="answ1" name="answ" onclick="showHideDivs(name, id)">
+            <label for="answ1">Uno</label>
+            <input type="radio" id="answ2" name="answ" onclick="showHideDivs(name, id)">
+            <label for="answ2">Due</label>
+            <input type="radio" id="answ3" name="answ" onclick="showHideDivs(name, id)">
+            <label for="answ3">Tre</label>
+        </form>
+        <div id="div5">
+            <h1>Hai richiesto il div5</h1>
+        </div>
+        <br>
+        <div id="div6">
+            <h1>Hai richiesto il div6</h1>
+        </div>
+        <br>
+    </body>
+</html>
