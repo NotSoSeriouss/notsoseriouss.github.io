@@ -11,7 +11,7 @@ function viewElement(id) {
 }
 
 function hideAllDivs() {
-    var divsNames = ["qd1", "qp1", "qp2", "qp3", "qs1", "qs2", "qs3", "qs4", "qs5", "qs6", "qg1", "qg2", "qg3", "qg4", "sumbit"];
+    var divsNames = ["qd1", "qp1", "qp2", "qp3", "qs1", "qs2", "qs3", "qs4", "qs5", "qs6", "qg1", "qg2", "qg3", "qg4", "sumbit", "answer"];
     divsNames.forEach(element =>
         document.getElementById(element).style.display = "none"
         );
@@ -153,7 +153,163 @@ function update(rbt, val) {
     }
 }
 
+function arrayEquals(a, b) {
+    return Array.isArray(a) &&
+        Array.isArray(b) &&
+        a.length === b.length &&
+        a.every((val, index) => val === b[index]);
+}
+
 function checkResults() {
     /*Print the results array*/
     console.debug(results);
+    // C++ only
+    for (var i = 0; i < 4; i++) {
+        if (arrayEquals(results, [ "q1::1", "q2:1", "q3:2", "q4:" + i ])) {
+            hideAllDivs();
+            showDiv("answer");
+            document.getElementById("answerImg").src = "images/cpp.png";
+            viewElement("answer");
+            return;
+        }
+    }
+
+    //C++ and qt
+    for (var i = 0; i < 4; i++) {
+        if (arrayEquals(results, [ "q1::1", "q2:1", "q3:1", "q4:" + i ])) {
+            hideAllDivs();
+            showDiv("answer");
+            document.getElementById("answerImg").src = "images/cppqt.png";
+            viewElement("answer");
+            return;
+        }
+    }
+
+    // Java with awt and swing
+    for (var i = 0; i < 4; i++) {
+        if (arrayEquals(results, [ "q1::1", "q2:2", "q3:1", "q4:" + i ])) { 
+            hideAllDivs();
+            showDiv("answer");
+            document.getElementById("answerImg").src = "images/javaandawt.png";
+            viewElement("answer");
+            return;
+        }
+    }
+    //Java only
+    for (var i = 0; i < 4; i++) {
+        if (arrayEquals(results, [ "q1::1", "q2:2", "q3:2", "q4:" + i ])) {
+            hideAllDivs();
+            showDiv("answer");
+            document.getElementById("answerImg").src = "images/java.png";
+            viewElement("answer");
+            return;
+        }
+    }
+    //My sql and js
+    if (arrayEquals(results, [ "q1::2", "q5::1", "q6:1", "q7:1" ])) {
+        hideAllDivs();
+        showDiv("answer");
+        document.getElementById("answerImg").src = "images/mysqlandjs.png";
+        viewElement("answer");
+        return;
+    }
+    //Only js
+    if (arrayEquals(results, [ "q1::2", "q5::1", "q6:2", "q7:1" ])) {
+        hideAllDivs();
+        showDiv("answer");
+        document.getElementById("answerImg").src = "images/jsonly.png";
+        viewElement("answer");
+        return;
+    }
+    //My sql and php
+    if (arrayEquals(results, [ "q1::2", "q5::1", "q6:1", "q7:2" ])) {
+        hideAllDivs();
+        showDiv("answer");
+        document.getElementById("answerImg").src = "images/mysqlandphp.png";
+        viewElement("answer");
+        return;
+    }
+    //Only php
+    if (arrayEquals(results, [ "q1::2", "q5::1", "q6:2", "q7:2" ])) {
+        hideAllDivs();
+        showDiv("answer");
+        document.getElementById("answerImg").src = "images/phply.png";
+        viewElement("answer");
+        return;
+    }
+    //WordPress and Html
+    if (arrayEquals(results, [ "q1::2", "q5::2", "q8:1" ])) {
+        hideAllDivs();
+        showDiv("answer");
+        document.getElementById("answerImg").src = "images/wordpressandhtml.png";
+        viewElement("answer");
+        return;
+    }
+    //Html, Bootstrap and Jquery
+    if (arrayEquals(results, [ "q1::2", "q5::2", "q8:2" ])) {
+        hideAllDivs();
+        showDiv("answer");
+        document.getElementById("answerImg").src = "images/htmlbootstrapandjquery.png";
+        viewElement("answer");
+        return;
+    }
+
+    //C++ and Unreal Engine 5
+    for (var i = 0; i < 3; i++) {
+        if (arrayEquals(results, [ "q1::3", "q11:1", "q12:" + i, "q14:1" ])) {
+            hideAllDivs();
+            showDiv("answer");
+            document.getElementById("answerImg").src = "images/cppandue.png";
+            viewElement("answer");
+            return;
+        }
+    }
+    //C# and Unity
+    for (var i = 0; i < 3; i++) {
+        if (arrayEquals(results, [ "q1::3", "q11:1", "q12:" + i, "q14:2" ])) {
+            hideAllDivs();
+            showDiv("answer");
+            document.getElementById("answerImg").src = "images/csharpandunity.png";
+            viewElement("answer");
+            return;
+        }
+    }
+    //CONSOLES VV
+    //C++ and Unreal Engine 5
+    for (var i = 0; i < 3; i++) {
+        if (arrayEquals(results, [ "q1::3", "q11:2", "q12:" + i, "q14:1" ])) {
+            hideAllDivs();
+            showDiv("answer");
+            document.getElementById("answerImg").src = "images/cppandue.png";
+            viewElement("answer");
+            return;
+        }
+    }
+    //C# and Unity
+    for (var i = 0; i < 3; i++) {
+        if (arrayEquals(results, [ "q1::3", "q11:2", "q12:" + i, "q14:2" ])) {
+            hideAllDivs();
+            showDiv("answer");
+            document.getElementById("answerImg").src = "images/csharpandunity.png";
+            viewElement("answer");
+            return;
+        }
+    }
+    
+    //C or C++ with android game libs
+    if (arrayEquals(results, [ "q1::3", "q11:3", "q13:1" ])) {
+        hideAllDivs();
+        showDiv("answer");
+        document.getElementById("answerImg").src = "images/candroid.png";
+        viewElement("answer");
+        return;
+    }
+    //C++ and metal api
+    if (arrayEquals(results, [ "q1::3", "q11:3", "q13:2" ])) {
+        hideAllDivs();
+        showDiv("answer");
+        document.getElementById("answerImg").src = "images/cppmetal.png";
+        viewElement("answer");
+        return;
+    }
 }
