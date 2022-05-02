@@ -10,7 +10,7 @@
         <link rel='stylesheet' type='text/css' media='screen' href='il.css'>
         <script src='il.js'></script>
     </head>
-    <body>
+    <body onload="setup();">
         <div in="mainnav" class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <img src="bitmap.png" width="5%">
@@ -55,7 +55,7 @@
             </div>
             <div class="form-check form-check-group">
                 <input type="radio" class="form-check-input r" name="q2" value="2" onclick="update(name, value)">
-                <label class="form-check-label" for="q2">Programma facile da programmare e ordinato?</label>
+                <label class="form-check-label" for="q2">Programma facile da programmare e ordinato.</label>
             </div>
         </div>
         
@@ -71,6 +71,57 @@
                 <label class="form-check-label" for="q3">Programma per terminale, per server o da eseguire in background.</label>
             </div>
         </div>
+        <!--domanda programma 3-->
+        <div id="qp3" class="col-5 div-question">
+            <h1>Su che piattaforma vuoi pubblicare?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q4" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q4">Linux e distro</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q4" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q4">Windows</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q4" value="3" onclick="update(name, value)">
+                <label class="form-check-label" for="q4">MacOS</label>
+            </div>
+        </div>
+
+        <!--domanda Sito 1-->
+        <div id="qs1" class="col-5 div-question">
+            <h1>Che tipo di sito web hai bisogno?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q5" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q5">Sito web per applicazioni</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q5" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q5">Sito web per semplice presentazione di un prodotto o un serivizio</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q5" value="3" onclick="update(name, value)">
+                <label class="form-check-label" for="q5">Sito web per un gioco</label>
+            </div>
+        </div>
+        
+        <!--domanda sito 2-->
+        <div id="qs2" class="col-5 div-question">
+            <h1>Che tipo di sito web hai bisogno?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q6" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q6">Sito web per applicazioni</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q6" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q6">Sito web per semplice presentazione di un prodotto o un serivizio</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q6" value="3" onclick="update(name, value)">
+                <label class="form-check-label" for="q6">Sito web per un gioco</label>
+            </div>
+        </div>
+
         <input type="button" onclick="checkResults()" value="Conferma">
     </body>
 </html>\
