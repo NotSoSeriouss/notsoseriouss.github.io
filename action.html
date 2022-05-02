@@ -29,6 +29,7 @@
         <div class="div-center">
             <h1>Rispondi a queste semplici domande:</h1>
         </div>
+        <hr/>
         <!--domanda iniziale-->
         <div id="qd1" class="col-5 div-question">
             <h1>Che tipo di programma hai intenzione di sviluppare?</h1>
@@ -90,7 +91,7 @@
 
         <!--domanda Sito 1-->
         <div id="qs1" class="col-5 div-question">
-            <h1>Che tipo di sito web hai bisogno?</h1>
+            <h1>Di che tipo di sito web hai bisogno?</h1>
             <div class="form-check form-check-group">
                 <input type="radio" class="form-check-input r" name="q5" value="1" onclick="update(name, value)">
                 <label class="form-check-label" for="q5">Sito web per applicazioni</label>
@@ -107,14 +108,14 @@
         
         <!--domanda sito 2-->
         <div id="qs2" class="col-5 div-question">
-            <h1>Che tipo di sito web hai bisogno?</h1>
+            <h1>Hai intenzione di salvare dati sulla tua app? (es. dati login o valori inseriti dall'utente)</h1>
             <div class="form-check form-check-group">
                 <input type="radio" class="form-check-input r" name="q6" value="1" onclick="update(name, value)">
-                <label class="form-check-label" for="q6">Sito web per applicazioni</label>
+                <label class="form-check-label" for="q6">Si</label>
             </div>
             <div class="form-check form-check-group">
                 <input type="radio" class="form-check-input r" name="q6" value="2" onclick="update(name, value)">
-                <label class="form-check-label" for="q6">Sito web per semplice presentazione di un prodotto o un serivizio</label>
+                <label class="form-check-label" for="q6">No</label>
             </div>
             <div class="form-check form-check-group">
                 <input type="radio" class="form-check-input r" name="q6" value="3" onclick="update(name, value)">
@@ -122,6 +123,94 @@
             </div>
         </div>
 
+        <!--domanda sito 3-->
+        <div id="qs3" class="col-5 div-question">
+            <h1>Preferisci che il tuo script venga eseguito in lato client o lato server?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q7" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q7">Lato Client (Codice sorgente visibile dall'utente)</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q7" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q7">Lato Server (Codice non visibile ma più rischioso dal punto di vista della sicurezza per il tuo server)</label>
+            </div>
+        </div>
+        <!--domanda sito 4-->
+        <div id="qs4" class="col-5 div-question">
+            <h1>Vuoi un ambiente di sviluppo web grafico o classico?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q8" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q8">Grafico (immediato ed intuitivo, tuttavia pone delle limitazioni a quello che si può fare)</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q8" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q8">Classico (programmazione tramite un IDE. Più difficile ma molta più libertà.)</label>
+            </div>
+        </div>
+        <!--domanda sito 5-->
+        <div id="qs5" class="col-5 div-question">
+            <h1>Desideri un ambiente di sviluppo grafico o classico?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q9" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q9">Grafico (velocizza enormemente il tempo di sviluppo)</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q9" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q9">Classico (programmazione tramite IDE e quindi più difficile. Tuttavia risulta meglio da gestire e molto più leggero)</label>
+            </div>
+        </div>
+        <!--domanda sito 6-->
+        <div id="qs6" class="col-5 div-question">
+            <h1>Stai cercando di sviluppare un gioco semplice o molto complesso?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q10" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q10">Semplice</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q10" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q10">Complesso</label>
+            </div>
+        </div>
+        <!--domanda gioco 1-->
+        <div id="qg1" class="col-5 div-question">
+            <h1>Per che piattaforma vuoi sviluppare?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q11" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q11">PC</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q11" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q11">Console</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q11" value="3" onclick="update(name, value)">
+                <label class="form-check-label" for="q11">Smartphone</label>
+            </div>
+        </div>
+        <!--domanda gioco 2-->
+        <div id="qg2" class="col-5 div-question">
+            <h1>Per che sistema operativo vuoi sviluppare?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q12" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q12">Windows</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q12" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q12">MacOS</label>
+            </div>
+        </div>
+        <!--domanda gioco 3-->
+        <div id="qg3" class="col-5 div-question">
+            <h1>Per che sistema operativo vuoi sviluppare?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q13" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q13">Android</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q13" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q13">iOS</label>
+            </div>
+        </div>
         <input type="button" onclick="checkResults()" value="Conferma">
     </body>
 </html>\
