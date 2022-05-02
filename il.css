@@ -1,4 +1,29 @@
 body {
     background: rgb(251,159,159);
-    background: radial-gradient(circle, rgba(251,159,159,1) 0%, rgba(255,255,255,1) 100%); 
+    background: radial-gradient(circle, rgb(125, 5, 5) 0%, rgb(24, 24, 24) 100%); 
+}
+
+.div-question {
+    background: rgba(0, 0, 0, 0.276);
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+label {
+    color: white;
+    font-size: x-large;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+.div-center {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px;
 }

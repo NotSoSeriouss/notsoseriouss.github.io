@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset='utf-8'>
@@ -7,9 +8,9 @@
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <link rel='stylesheet' type='text/css' media='screen' href='il.css'>
-        <script src='main.js'></script>
+        <script src='il.js'></script>
     </head>
-    <body id="page-top">
+    <body>
         <div in="mainnav" class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <img src="bitmap.png" width="5%">
@@ -24,35 +25,52 @@
             </div>
         </div>
         <br><br>
-        <div class="container">
-            <!--A section with a quiz that asks 3 questions and sends the results to js-->
-            <section>
-                <h1>É ora di scegliere un linguaggio</h1>
-                <form action="action.html" method="post">
-                    <div class="form-group">
-                        <label for="question1">Che cosa vorresti programmare?</label>
-                        <!--Input 3 radio buttons using bootstrap-->
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="question1" id="question1" value="1">
-                            <label class="form-check-label" for="question1">
-                                Un Videogioco
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="question1" id="question1" value="2">
-                            <label class="form-check-label" for="question1">
-                                Un Programma (Scaricabile e Installabile)
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="question1" id="question1" value="2">
-                            <label class="form-check-label" for="question1">
-                                Un sito internet
-                            </label>
-                        </div>
-                    </div>
-                </form>
-            </section>
+        <!--Qui c'è la parte effetiva del quiz-->
+        <div class="div-center">
+            <h1>Rispondi a queste semplici domande:</h1>
         </div>
+        <!--domanda iniziale-->
+        <div id="qd1" class="col-5 div-question">
+            <h1>Che tipo di programma hai intenzione di sviluppare?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q1" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q1">Programma eseguibile o installabile</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q1" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q1">Sito web o programma web</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q1" value="3" onclick="update(name, value)">
+                <label class="form-check-label" for="q1">Videogioco</label>
+            </div>
+        </div>
+
+        <!--domanda programa 1-->
+        <div id="qp1" class="col-5 div-question">
+            <h1>Preferisci un programma veloce ed efficente o facile da programmare e ordinato?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q2" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q2">Programma veloce ed efficente</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q2" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q2">Programma facile da programmare e ordinato?</label>
+            </div>
+        </div>
+        
+        <!--domanda programma 2-->
+        <div id="qp2" class="col-5 div-question">
+            <h1>Di che tipo di programma hai bisogno?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q3" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q3">Programma con grafiche avanzate</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q3" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q3">Programma per terminale, per server o da eseguire in background.</label>
+            </div>
+        </div>
+        <input type="button" onclick="checkResults()" value="Conferma">
     </body>
-</html>
+</html>\
