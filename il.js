@@ -11,7 +11,7 @@ function viewElement(id) {
 }
 
 function hideAllDivs() {
-    var divsNames = ["qd1", "qp1", "qp2", "qp3", "qs1", "qs2", "qs3", "qs4", "qs5", "qs6", "qg1", "qg2", "qg3"];
+    var divsNames = ["qd1", "qp1", "qp2", "qp3", "qs1", "qs2", "qs3", "qs4", "qs5", "qs6", "qg1", "qg2", "qg3", "qg4", "sumbit"];
     divsNames.forEach(element =>
         document.getElementById(element).style.display = "none"
         );
@@ -38,15 +38,23 @@ function update(rbt, val) {
         setUneditable("qd1");
         if (val == "1") {
             showDiv("qp1");
+            viewElement("qp1");
             results.push("q1::1");
         }
         if (val == "2") {
             showDiv("qs1");
+            viewElement("qs1");
             results.push("q1::2");
+        }
+        if (val == "3") {
+            showDiv("qg1");
+            viewElement("qg1");
+            results.push("q1::3");
         }
     }
     if (rbt == "q2") {
         showDiv("qp2");
+        viewElement("qp2");
         setUneditable("qp1");
         results.push("q2:" + val);
     }
@@ -59,15 +67,19 @@ function update(rbt, val) {
     if (rbt == "q4") {
         setUneditable("qp3");
         results.push("q4:" + val);
+        showDiv("sumbit");
+        viewElement("sumbit");
     }
     if (rbt == "q5") {
         if (val == "1") {
             showDiv("qs2");
+            viewElement("qs2");
             setUneditable("qs1");
             results.push("q5::1");
         }
         if (val == "2") {
             showDiv("qs4");
+            viewElement("qs4");
             setUneditable("qs1");
             results.push("q5::2");
         }
@@ -84,19 +96,60 @@ function update(rbt, val) {
     if (rbt == "q7") {
         setUneditable("qs3");
         results.push("q7:" + val);
+        showDiv("sumbit");
+        viewElement("sumbit");
     }
     if (rbt == "q8") {
         setUneditable("qs4");
         results.push("q8:" + val);
+        showDiv("sumbit");
+        viewElement("sumbit");
     }
     if (rbt == "q9") {
         setUneditable("qs5");
         showDiv("qs6");
+        viewElement("qs6");
         results.push("q9:" + val);
     }
     if (rbt == "q10") {
         setUneditable("qs6");
         results.push("q10:" + val);
+        showDiv("sumbit");
+        viewElement("sumbit");
+    }
+    if (rbt == "q11") {
+        setUneditable("qg1");
+        results.push("q11:" + val);
+        if (val == "1") {
+            showDiv("qg2");
+            viewElement("qg2");
+        }
+        if (val == "2") {
+            showDiv("qg4");
+            viewElement("qg4");
+        }
+        if (val == "3") {
+            showDiv("qg3");
+            viewElement("qg3");
+        }
+    }
+    if (rbt == "q12") {
+        setUneditable("qg2");
+        showDiv("qg4");
+        viewElement("qg4");
+        results.push("q12:" + val);
+    }
+    if (rbt == "q13") {
+        setUneditable("qg3");
+        results.push("q13:" + val);
+        showDiv("sumbit");
+        viewElement("sumbit");
+    }
+    if (rbt == "q14") {
+        setUneditable("qg4");
+        results.push("q14:" + val);
+        showDiv("sumbit");
+        viewElement("sumbit");
     }
 }
 

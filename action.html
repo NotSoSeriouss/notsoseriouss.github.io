@@ -16,10 +16,10 @@
                 <img src="bitmap.png" width="5%">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="index.html">Home</a>
+                        <a class="nav-link js-scroll-trigger text-white" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="about.html">About</a>
+                        <a class="nav-link js-scroll-trigger text-white" href="about.html">About</a>
                     </li>
                 </ul>
             </div>
@@ -211,6 +211,22 @@
                 <label class="form-check-label" for="q13">iOS</label>
             </div>
         </div>
-        <input type="button" onclick="checkResults()" value="Conferma">
+        <!--domanda gioco 4-->
+        <div id="qg4" class="col-5 div-question">
+            <h1>Sei interessato a grafiche e tools mozzafiato o a un GameEngine semplice?</h1>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q14" value="1" onclick="update(name, value)">
+                <label class="form-check-label" for="q14">Grafiche e tools mozzafiato</label>
+            </div>
+            <div class="form-check form-check-group">
+                <input type="radio" class="form-check-input r" name="q14" value="2" onclick="update(name, value)">
+                <label class="form-check-label" for="q14">Un GameEngine semplice</label>
+            </div>
+        </div>
+
+        <div id="sumbit" class="div-question div-center">
+            <input type="button" class="btn btn-danger" onclick="checkResults()" value="Conferma">
+            <input type="button" class="btn btn-danger" onclick="window.location.reload();" value="Ricomincia">
+        </div>
     </body>
 </html>\
